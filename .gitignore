@@ -46,7 +46,7 @@ ehthumbs.db
 Thumbs.db
 
 # Tailwind CSS
-src/css/output.css
+src/css/input.css
 
 # Environment variables
 .env

@@ -4,18 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Iframe Tester: Best Free Online iframe testing & Code Generator & Preview Tool
+      Iframe Tester: Best Free Online iframe testing & Code Generator & Preview
+      Tool
     </title>
     <meta
       name="description"
       content="Iframe Tester - The ultimate free online tool for iframe testing, code generation, and live preview. Perfect for webmasters and designers to easily embed and customize iframes on any webpage."
     />
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link href="./src/css/style.css" rel="stylesheet">
+    <link href="./src/css/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-KFM81L5F9R"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-KFM81L5F9R");
+    </script>
     <style>
       body {
         font-family: "Inter", sans-serif;
@@ -71,7 +87,7 @@
         </div>
       </section>
 
-      <section id="resultSection" class="hidden">
+      <section id="resultSection" class="hidden mb-12">
         <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-6">
           <h2 class="text-xl font-semibold mb-4">Test Result</h2>
           <div id="testResult" class="mb-4"></div>
@@ -382,7 +398,8 @@ if (top != self) top.location.replace(self.location.href);
       <div class="container mx-auto px-4 text-center">
         <p>&copy; 2024 Iframe Tester. All rights reserved.</p>
         <p class="mt-2 text-gray-400">
-          Iframe Tester: Best Free Online iframe testing &Code Generator & Preview Tool.
+          Iframe Tester: Best Free Online iframe testing &Code Generator &
+          Preview Tool.
         </p>
       </div>
     </footer>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <!-- 深蓝色背景 -->
+  <rect width="16" height="16" fill="#0047AB"/>
+  
+  <!-- 白色小正方形（代表嵌入的iframe） -->
+  <rect x="4" y="4" width="8" height="8" fill="white"/>
+  
+  <!-- 绿色小勾号 -->
+  <path d="M9 11.5L11 9.5L11.5 10L9 12.5L7 10.5L7.5 10L9 11.5Z" fill="green"/>
+</svg>

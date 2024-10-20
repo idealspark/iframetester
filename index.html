@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Iframe Tester: Best Free Online iframe testing & Code Generator & Preview
-      Tool
+      Iframe Tester: Test, Code Generate & Preview for Free
     </title>
     <meta
       name="description"
@@ -431,15 +430,22 @@ if (top != self) top.location.replace(self.location.href);
       newPagePreviewBtn.addEventListener("click", openNewPagePreview);
 
       function testIframe() {
-        const url = urlInput.value;
+        const url = urlInput.value.trim();
         if (!url) {
           alert("Please enter a URL to test");
           return;
         }
 
+        // Validate and process the URL
+        const processedUrl = processUrl(url);
+        if (!processedUrl) {
+          alert("Please enter a valid URL");
+          return;
+        }
+
         // Create iframe
         const iframe = document.createElement("iframe");
-        iframe.src = url;
+        iframe.src = processedUrl;
         iframe.style.width = "100%";
         iframe.style.height = "400px";
         iframe.style.border = "none";
@@ -459,7 +465,22 @@ if (top != self) top.location.replace(self.location.href);
 
         updateIframeCode();
       }
+      function processUrl(url) {
+        // Regular expression to validate URL format
+        const urlPattern =
+          /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
 
+        if (!urlPattern.test(url)) {
+          return null;
+        }
+
+        // Add http:// if no protocol is specified
+        if (!url.startsWith("http://") && !url.startsWith("https://")) {
+          url = "https://" + url;
+        }
+
+        return url;
+      }
       function toggleCustomizeControls() {
         iframeControls.classList.toggle("hidden");
         customizeArrow.classList.toggle("rotate-180");
